@@ -178,6 +178,7 @@ select {
   font-size: 1.6rem;
   text-indent: 5px;
   margin: 4rem 0;
+  border: 1px solid #d1d3d5;
 }
 
 .submitBtn {
@@ -205,3 +206,39 @@ select {
   font-size: 1.2rem;
 
 }
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES ========================= */
+
+@media (max-width: 800px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .header, .main, select {
+    width: 100%;
+  }
+
+  .header, .main {
+    padding: 3rem 2rem;
+  }
+
+  .header {
+    height: auto;
+  }
+
+  .searchSection, .gallerySection {
+    padding-bottom: 4rem;
+  }
+
+}
+
+
+
+

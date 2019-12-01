@@ -38,7 +38,6 @@ class Results extends Component {
 
                         <div className="gallery">
                             
-
                         {/* APPEND PHOTOS HERE */}
 
                         </div>

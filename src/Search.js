@@ -56,7 +56,7 @@ handleInputChange = (e) => {
             <div className="formArea">
 
               <form action="" className="themeForm">
-
+              
                 <label htmlFor="theme" className="visually-hidden"></label>
                 <select onChange={this.handleInputChange} name="theme" className="themeSelect" id="themeSelect" ref={select => this.theme}>
 
