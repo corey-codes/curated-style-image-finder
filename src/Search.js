@@ -1,78 +1,79 @@
 import React, { Component } from "react";
-import axios from "axios";
 import "./App.css";
-//===============================================
+//==============================================
 
-// API KEY ======================================
-// const apiKey =
-//   "787d03c5f6bcb1fd25de1eb439b440461a0859cbb19a541743b4af9a881af1ca";
+/* PSEUDO CODE =============================
+
+1. COMPONENT TO LET THE USER SELECT A THEME 
+    A. USER SELECTS A THEME FROM A SELECT DROP DOWN
+    B. WHATEVER THE USER CLICKS ON WE WILL SAVE THAT SELECTION IN STATE
+    C. ON SUBMIT, WE WILL TAKE USER SELECTION AND PASS IT UP TO APP.JS THROUGH A FUNCTION THAT WAS PASSED DOWN IN PROPS
+
+WHAT WE NEED TO BUILD: 
+-  NEED TO CREATE A FORM
+-  SET STATE
+-  FUNCTION FROM PROPS
+
+========================================*/
+
 
 // CONSTRUCTOR & SUPER ===========================
 class Search extends Component {
   constructor() {
     super();
     this.state = {
-      userSelection: '',
-      apiKey: "787d03c5f6bcb1fd25de1eb439b440461a0859cbb19a541743b4af9a881af1ca"
+      userSelection: ''
     };
   }
 
-  // FUNCTIONS ====================================
-
-  // API CALL =====================================
-  componentDidMount() {
-    axios({
-      url: "https://api.unsplash.com/search/photos?",
-      method: "GET",
-      dataResponse: "json",
-      params: {
-        client_id: this.state.apiKey,
-        queryParam: "value",
-        page: 1,
-        per_page: 50,
-        query: "dog"
-        //TO BE ADDED BASED ON USER SELECTION DROP DOWN MENU
-      }
-      // NOT SURE IF THIS PART IS DONE RIGHT
-    })
-    .then(function(response => {
-      this.setState({
-
-      })
-      .then 
-    }); 
-  }
+// FUNCTIONS ====================================
+handleInputChange = (e) => {
+  console.log(e.target.value);
+  this.setState({
+    userSelection: e.target.value
+  // }, () => { - do i need a second callback function to make sure state is set before moving on?
+  });
+};
 
 
 // RENDER =======================================
   render() {
+    // THIS FUNCTION IS TECHINCALLY NEVER CALLED, THAT'S OK
+    const deferredFunction = (e) => this.props.getUserThemeSelectionProp(e, this.state.userSelection);
 
 // RETURN ========================================
     return (
-      <div className="search">
-        <div className="wrapper">
-          {/* SEARCH SECTION =============*/}
 
+      <div className="Search">
+
+        <div className="wrapper">
+
+{/* SEARCH SECTION =============*/}
           <div className="searchSection">
+
             <h2>Search</h2>
 
             <div className="formArea">
 
               <form action="" className="themeForm">
 
-                <select onChange={this.userSelectedTheme} name="themes" className="themeSelect" id="themeSelect">
+                <label htmlFor="theme" className="visually-hidden"></label>
+                <select onChange={this.handleInputChange} name="theme" className="themeSelect" id="themeSelect" ref={select => this.theme}>
 
-                  <option value="chooseOne">Select a category</option>
-                  <option value="travel">Travel</option>
-                  <option value="homeDecor">Home Decor</option>
-                  <option value="flatLay">Flatlay</option>
-                  <option value="foodAndDrink">Food & Drink</option>
-                  <option value="pets">Pets</option>
-                  <option value="wallpaper">Wallpaper</option>
+                  <option defaultValue="default" value="Choose One">Select a category</option>
+                  <option value="Travel">Travel</option>
+                  <option value="Home Decor">Home Decor</option>
+                  <option value="Flat-lay">Flat-lay</option>
+                  <option value="Food and Drink">Food and Drink</option>
+                  <option value="Pets">Pets</option>
+                  <option value="Wallpaper">Wallpaper</option>
 
                 </select>
 
-                <button type="submit" className="submitBtn">Get My Photos</button>
+                <button type="submit" className="submitBtn" onClick={ (e) =>
+                    this.props.getThemeProp(e, this.state.userSelection)}>
+                      Get My Photos
+                </button>
 
               </form>
 
@@ -80,24 +81,14 @@ class Search extends Component {
 
           </div>
 
-{/* GALLERY SECTION =============*/}
-
-          <div className="gallerySection">
-
-            <h2>Gallery Results</h2>
-  
-            <div className="results">
-  
-            </div>
-
-          </div>
-
         </div>
 
       </div>
-    );
+    )
   }
 }
+
+
 
 // EXPORT =====================================
 export default Search;

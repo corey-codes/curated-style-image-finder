@@ -97,6 +97,9 @@ img {
 
 .App {
   text-align: center;
+  /* background-image: url('./assets/redox_01.png'); */
+    background-image: url('./assets/blue-snow.png');
+
 }
 
 /* SECTIONS -====================== */
@@ -147,7 +150,22 @@ h1::after {
   padding-bottom: 8rem;
 }
 
-.search {
+h2 {
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 10%;
+  height: 0.5rem;
+  background-color: #ac345c;
+  position: absolute;
+  bottom: -25px;
+  left: 45%;
+}
+
+
+.Search, .Results {
   background-color: #ffff;
   font-family: 'Raleway';
 }
@@ -159,6 +177,7 @@ select {
   padding: 2rem;
   font-size: 1.6rem;
   text-indent: 5px;
+  margin: 4rem 0;
 }
 
 .submitBtn {
@@ -183,5 +202,6 @@ select {
 .footer {
   background-color: #d1d3d5;
   padding: 1rem 2rem;
+  font-size: 1.2rem;
 
 }
