@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import "./App.css";
 //==============================================
 
@@ -22,18 +23,21 @@ class Search extends Component {
   constructor() {
     super();
     this.state = {
-      userSelection: ''
+      userSelection: "",
+      // allPhotos: [],
     };
   }
 
+
 // FUNCTIONS ====================================
 handleInputChange = (e) => {
-  console.log(e.target.value);
+  console.log(e.target.value); //WORKING - LOGS THEME 
   this.setState({
     userSelection: e.target.value
-  // }, () => { - do i need a second callback function to make sure state is set before moving on?
+  // }, () => { - do i need a second callback function to make sure state is set before moving on???
   });
 };
+
 
 
 // RENDER =======================================
@@ -70,8 +74,10 @@ handleInputChange = (e) => {
 
                 </select>
 
-                <button type="submit" className="submitBtn" onClick={ (e) =>
-                    this.props.getThemeProp(e, this.state.userSelection)}>
+                <button type="submit" className="submitBtn" 
+                  // onClick={ (e) => this.props.getThemeProp(e, this.state.userSelection)}
+                  onClick={(event) => {this.props.handleSearch(event, this.state.userSelection)}}
+                >
                       Get My Photos
                 </button>
 

@@ -20,45 +20,37 @@ import Footer from './Footer.js';
 
 // CONSTRUCTOR & SUPER ===========================
 class App extends Component {
-  
   constructor() {
     super();
     this.state = {
+      pullPhotos: [],
       allPhotos: [],
       getPhotos: [],
-      // userSelection: '',
-      apiKey: "787d03c5f6bcb1fd25de1eb439b440461a0859cbb19a541743b4af9a881af1ca"
+      apiKey: "787d03c5f6bcb1fd25de1eb439b440461a0859cbb19a541743b4af9a881af1ca",
     };
   }
 
-  // API CALL =====================================
-  componentDidMount() {
-    //- IF I HAVE IT IN C.D.M IT IS DOING THE CALL RIGHT AWAY BEFORE SELECTION IS MADE....IT SEARCHES "SELECT A CATEGORY" UGH...
-
-    //MAY NEED SOME SORT OF IF STATEMENT...IF USER SELECTION RECEIVED MAKE AXIOS CALL? if userSelect !== '' 
-
-    // const pullPhotos = () => {
-
-      axios({
-        url: `https://api.unsplash.com/search/photos?`,
-        method: "GET",
-        dataResponse: "json",
-        params: {
-          client_id: this.state.apiKey,
-          queryParam: "value",
-          page: 1,
-          per_page: 20,
-          query: this.getTheme
-          //this is running the request right away based on "Select a Category" it's not waiting for the button click maybe because it's in componentdidmount
-        }
-      }).then(response => {
-        console.log(response.data.results);
-        this.setState({
-          allPhotos: response.data.results
-        });
+  handleSearch = (event, searchValue) => {
+    event.preventDefault();
+    axios({
+      url: `https://api.unsplash.com/search/photos?`,
+      method: "GET",
+      dataResponse: "json",
+      params: {
+        client_id: this.state.apiKey,
+        queryParam: "value",
+        page: 1,
+        per_page: 20,
+        query: searchValue
+      }
+    }).then(response => {
+      console.log(response.data.results);
+      const allPhotos = response.data.results;
+      this.setState({
+        allPhotos
       });
-    // }
-  }
+    });
+  };
 
   // FUNCTIONS ====================================
 
@@ -71,7 +63,7 @@ class App extends Component {
     // IT IS PULLING THE THEME CHOICE FROM THE FORM SO, YAY!
 
     const getPhotos = [...this.state.allPhotos];
-    console.log(getPhotos, 'got some photos!');
+    console.log(getPhotos, "got some photos when I hit submit!");
   };
 
   // RENDER =======================================
@@ -79,45 +71,36 @@ class App extends Component {
     // RETURN ========================================
     return (
       <div className="App">
-
         <div className="flex">
-
           <Head />
 
           <div className="main flex">
-
-            <Search getThemeProp={this.getTheme} />
+            <Search 
+              handleSearch={this.handleSearch}
+              // getThemeProp={this.getTheme} 
+            />
 
             <div className="Results">
-
               <div className="wrapper">
-
                 <div className="gallerySection">
-
                   <h2>Gallery Results</h2>
 
                   {
-                    // this.getPhotos.map((photo, index) => {
+                    // allPhotos.map((photo, index) => {
                     //   return (
                     //     <div className="photos" key={index}>
                     //       <img src={photo.id} alt={photo.id.title}/>
                     //     </div>
                     //   )
-                    // })                    
+                    // })
                   }
-
                 </div>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
 
         <Footer />
-
       </div>
     );
   }
