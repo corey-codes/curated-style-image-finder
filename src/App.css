@@ -1,4 +1,4 @@
-/* REMOVE DEFAULTS & STANDARD STYLES ====================== */
+/* REMOVE DEFAULTS & STANDARD STYLES =========== */
 body, h1, h2, h3, p, ul, li {
 	margin: 0;
   padding: 0;
@@ -26,17 +26,9 @@ h3 {
 
 p, a {
     font-family: 'Raleway';
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 2.5rem; 
     color: #232323;
-}
-
-i {
-    font-size: 4rem;
-  
-    /* &:hover {
-            color: $color-2; */
-        /* }   */
 }
 
 a {
@@ -59,12 +51,11 @@ textarea {
     border: none;
 }
 
-/* GLOBAL STYLES */
+/* GLOBAL STYLES ==============================*/
 
 html {
   font-size: 62.5%;
-  /* background-image: url('./assets/light_toast_@2X.png');
-  background-attachment: fixed; */
+  
 }
 
 .wrapper {
@@ -102,13 +93,13 @@ img {
 
 }
 
-/* SECTIONS -====================== */
+/* SECTIONS -================================ */
 
 .header, .main {
   padding: 6rem 2rem;
 }
 
-/* HEADER ==========================*/
+/* HEADER ====================================*/
 
 .header {
   background-image: url('./assets/blue-snow.png');
@@ -137,14 +128,14 @@ h1::after {
 
 
 
-/* MAIN =========================== */
+/* MAIN ======================================= */
 
 .main {
   flex-direction: column;
   width: 70%;
 }
 
-/* SEARCH SECTION================== */
+/* SEARCH SECTION ============================== */
 
 .searchSection, .gallerySection {
   padding-bottom: 8rem;
@@ -198,7 +189,38 @@ select {
   color: #EAF3FA;
 }
 
-/* FOOTER ==========================*/
+/* RESULTS =================================== */
+
+.galleryContainer {
+  padding: 6rem 0;
+}
+
+.photo {
+  padding: 2rem;
+}
+
+.credit {
+  display: block;
+  padding: 1rem;
+}
+
+.credit:hover{
+  color: #ac345c;
+  font-weight: 600;
+}
+
+.download {
+  font-size: 4rem;
+  padding: 1rem;
+  color: #97dcd8;
+}
+
+.download:hover {
+  color: #ac345c;
+}
+
+
+/* FOOTER =====================================*/
 
 .footer {
   background-color: #d1d3d5;
@@ -209,12 +231,9 @@ select {
 
 
 
-
-
-
-
-
-/* MEDIA QUERIES ========================= */
+/* *************************************** */
+/* MEDIA QUERIES 
+********************************************/
 
 @media (max-width: 800px) {
   .flex {

@@ -23,10 +23,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      pullPhotos: [],
       allPhotos: [],
-      getPhotos: [],
       apiKey: "787d03c5f6bcb1fd25de1eb439b440461a0859cbb19a541743b4af9a881af1ca",
+      // pullPhotos: [],
+      // getPhotos: [],
     };
   }
 
@@ -48,52 +48,55 @@ class App extends Component {
       const allPhotos = response.data.results;
       this.setState({
         allPhotos
-      });
+      }); console.log(allPhotos);
     });
   };
 
-  // FUNCTIONS ====================================
+// FUNCTIONS ====================================
 
-  // 1. NEED TO GET THE THEME SELECTED BY THE USER ON THE FORM
-  // NOTE - I THINK THIS SHOULD ONLY BE CALLED ON SUBMIT...INFO SHOULD BE STORED IN GLOBAL STATE?
+// 1. NEED TO GET THE THEME SELECTED BY THE USER ON THE FORM
 
   getTheme = (e, themeChoice) => {
     e.preventDefault();
-    console.log(themeChoice);
-    // IT IS PULLING THE THEME CHOICE FROM THE FORM SO, YAY!
+    // console.log(themeChoice);
 
     const getPhotos = [...this.state.allPhotos];
-    console.log(getPhotos, "got some photos when I hit submit!");
+    // console.log(getPhotos, "got some photos when I hit submit!");
   };
 
-  // RENDER =======================================
+// RENDER =======================================
   render() {
-    // RETURN ========================================
+// RETURN ========================================
     return (
       <div className="App">
         <div className="flex">
           <Head />
 
           <div className="main flex">
-            <Search 
-              handleSearch={this.handleSearch}
-              // getThemeProp={this.getTheme} 
-            />
+            <Search handleSearch={this.handleSearch} />
 
+{/* RESULTS */}
             <div className="Results">
               <div className="wrapper">
                 <div className="gallerySection">
                   <h2>Gallery Results</h2>
-
-                  {
-                    // allPhotos.map((photo, index) => {
-                    //   return (
-                    //     <div className="photos" key={index}>
-                    //       <img src={photo.id} alt={photo.id.title}/>
-                    //     </div>
-                    //   )
-                    // })
-                  }
+                  <div className="galleryContainer">
+                    {this.state.allPhotos.map( (photo) => {
+                      return (
+                        <div className="photos">
+                          <img
+                            src={photo.links.download}
+                            alt={photo.alt_description}
+                          />
+                          <a href={photo.user.portfolio_url} target="_blank" title="Visit the photographers website" className="credit">
+                            Photo by: {photo.user.first_name}{" "}
+                            {photo.user.last_name}
+                          </a>
+                          <a href={photo.links.download} target="_blank" title="Download this photo"><i class="fas fa-save download"></i></a>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
             </div>
@@ -101,6 +104,7 @@ class App extends Component {
         </div>
 
         <Footer />
+
       </div>
     );
   }
@@ -108,3 +112,14 @@ class App extends Component {
 // EXPORT =====================================
 export default App;
 
+/* REMAINING:
+
+. APPEND PHOTOS TO PAGE
+4. ALT TAG DESCRIPTION
+2. ADD PHOTOGRAPHERS NAME
+3. LINK BACK TO PHOTOGRAPHERS UNSPLASH PROFILE
+3. CREDIT UNSPLASH
+5. DOWNLOAD LINK
+6. ERROR MESSAGE IF USER SUBMITS WITHOUT CHOOSING CATEGORY
+
+*/
