@@ -81,6 +81,7 @@ img {
 .App {
   text-align: center;
   background-image: url('./assets/blue-snow.png');
+  background-attachment: fixed;
 }
 
 /* SECTIONS -================================ */
@@ -92,7 +93,6 @@ img {
 /* HEADER ====================================*/
 
 .header {
-  background-image: url('./assets/blue-snow.png');
   height: 95vh;
   width: 30%;
 }
