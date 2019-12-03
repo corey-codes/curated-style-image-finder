@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import { Link, Element, Events, animateScroll as scroll } from "react-scroll";
 //==============================================
 
 /* PSEUDO CODE =============================
@@ -27,12 +28,12 @@ class Search extends Component {
   }
 
 // FUNCTIONS ====================================
-handleInputChange = (e) => {
-  console.log(e.target.value);  
-  this.setState({
-    userSelection: e.target.value
-  });
-};
+  handleInputChange = (e) => {
+    console.log(e.target.value);  
+    this.setState({
+      userSelection: e.target.value
+    });
+  };
 
 // RENDER =======================================
   render() {
@@ -40,53 +41,55 @@ handleInputChange = (e) => {
 
 // RETURN ========================================
     return (
-
       <div className="Search">
-
         <div className="wrapper">
-
-{/* SEARCH SECTION =============*/}
+          {/* SEARCH SECTION =============*/}
           <div className="searchSection">
-
             <h2>Search</h2>
 
             <div className="formArea">
-
               <form action="" className="themeForm">
-              
                 <label htmlFor="theme" className="visually-hidden"></label>
-                <select onChange={this.handleInputChange} name="theme" className="themeSelect" id="themeSelect" ref={select => this.theme}>
-
-                  <option defaultValue="default" value="Choose One">Select a category</option>
+                <select
+                  onChange={this.handleInputChange}
+                  name="theme"
+                  className="themeSelect"
+                  id="themeSelect"
+                  ref={select => this.theme}
+                >
+                  <option defaultValue="default" value="Choose One">
+                    Select a category
+                  </option>
                   <option value="Travel">Travel</option>
+                  <option value="Fitness">Fitness</option>
+                  <option value="Fashion">Fashion</option>
                   <option value="Home Decor">Home Decor</option>
-                  <option value="Flat-lay">Flat-lay</option>
-                  <option value="Food and Drink">Food and Drink</option>
+                  <option value="Beauty">Beauty</option>
+                  <option value="Food">Food</option>
+                  <option value="DIY">DIY</option>
                   <option value="Pets">Pets</option>
+                  <option value="Flat lay">Flat Lay</option>
                   <option value="Wallpaper">Wallpaper</option>
-
                 </select>
 
-                <button type="submit" className="submitBtn" 
-                  onClick={(event) => {this.props.handleSearch(event, this.state.userSelection)}}
+                <button
+                  type="submit"
+                  className="submitBtn"
+                  href="#gallery"
+                  onClick={event => {
+                    this.props.handleSearch(event, this.state.userSelection);
+                  }}
                 >
-                      Get My Photos
+                  Get My Photos
                 </button>
-
               </form>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-    )
+    );
   }
 }
-
-
 
 // EXPORT =====================================
 export default Search;

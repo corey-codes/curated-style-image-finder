@@ -1,35 +1,76 @@
-import React, { Component } from "react";
-import "./App.css";
+// import React, { Component } from "react";
+// import "./App.css";
 //==============================================
 
 /* PSEUDO CODE =============================
 
-1. GET THE PHOTO RESULTS
-2. APPEND TO PAGE
+// 1. GET THE PHOTO RESULTS
+// 2. APPEND TO PAGE
 
 ========================================*/
 
-// CONSTRUCTOR & SUPER ===========================
-class Results extends Component {
-  constructor() {
-    super();
-    this.state = {
-      allPhotos: []
-    };
-  }
+//CONSTRUCTOR & SUPER ===========================
+// class Results extends Component {
 
-  // FUNCTIONS ====================================
- 
+// RENDER =======================================
+  // render() {
 
-  // RENDER =======================================
-  render() {
-    
+//RETURN ====================================
+//     return (
 
-// RETURN ====================================
-        
-}
+//       <div className="Results">
+//           <div className="wrapper">
+//             <div className="gallerySection">
+//               <h2 id="gallery">Gallery Results</h2>
+//               <div className="galleryContainer">
+//                 {this.state.allPhotos.map((photo, i) => {
+//                   return (
+//                     <div className="photos" key={i}>
+//                       <img
+//                         src={photo.urls.regular}
+//                         alt={photo.alt_description}
+//                       />
+//                       <a
+//                         href={photo.user.portfolio_url}
+//                         target="_blank"
+//                         title="Visit the photographers website"
+//                         className="credit"
+//                       >
+//                         Photo by: {photo.user.first_name}{" "}
+//                         {photo.user.last_name}
+//                       </a>
+//                       <a
+//                         href={photo.links.download}
+//                         target="_blank"
+//                         title="Download this photo, large file size"
+//                       >
+//                         <i className="fas fa-save download downloadLarge"></i>
+//                       </a>
+//                       <a
+//                         href={photo.urls.regular}
+//                         target="_blank"
+//                         title="Download this photo, medium file size"
+//                       >
+//                         <i className="fas fa-save download downloadRegular"></i>
+//                       </a>
 
-// EXPORT =====================================
+//                       <a
+//                         href={photo.urls.small}
+//                         target="_blank"
+//                         title="Download this photo, small file size"
+//                       >
+//                         <i className="fas fa-save download downloadSmall"></i>
+//                       </a>
+//                     </div>
+//                   );
+//                 })}
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//     );
+//   }
+// }
+
+// // EXPORT ====================================
 // export default Results;
-
-// <a title="Download photo" href="https://unsplash.com/photos/WTSn3axynUk/download?force=true" rel="nofollow" download="" target="_blank" class="_37zTg _1l4Hh _1CBrG _1zIyn xLon9 _1Tfeo NDx0k _2Xklx"><svg class="Apljk _11dQc" version="1.1" viewBox="0 0 32 32" width="32" height="32" aria-hidden="false"><path d="M25.8 15.5l-7.8 7.2v-20.7h-4v20.7l-7.8-7.2-2.7 3 12.5 11.4 12.5-11.4z"></path></svg></a>

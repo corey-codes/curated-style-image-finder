@@ -48,7 +48,7 @@ class App extends Component {
       const allPhotos = response.data.results;
       this.setState({
         allPhotos
-      }); console.log(allPhotos);
+      }); //console.log(allPhotos);
     });
   };
 
@@ -56,13 +56,13 @@ class App extends Component {
 
 // 1. NEED TO GET THE THEME SELECTED BY THE USER ON THE FORM
 
-  getTheme = (e, themeChoice) => {
-    e.preventDefault();
-    // console.log(themeChoice);
+  // getTheme = (e, themeChoice) => {
+  //   e.preventDefault();
+  //   // console.log(themeChoice);
 
-    const getPhotos = [...this.state.allPhotos];
-    // console.log(getPhotos, "got some photos when I hit submit!");
-  };
+  //   const getPhotos = [...this.state.allPhotos];
+  //   // console.log(getPhotos, "got some photos when I hit submit!");
+  // };
 
 // RENDER =======================================
   render() {
@@ -75,24 +75,52 @@ class App extends Component {
           <div className="main flex">
             <Search handleSearch={this.handleSearch} />
 
+            {/* <Results allPhotos={this.response.data.results} /> */}
 {/* RESULTS */}
             <div className="Results">
               <div className="wrapper">
                 <div className="gallerySection">
-                  <h2>Gallery Results</h2>
+                  <h2 id="gallery">Gallery Results</h2>
                   <div className="galleryContainer">
-                    {this.state.allPhotos.map( (photo) => {
+                    {this.state.allPhotos.map((photo, i) => {
                       return (
-                        <div className="photos">
+                        <div className="photos" key={i}>
                           <img
-                            src={photo.links.download}
+                            // src={photo.links.download}
+                            src={photo.urls.regular}
                             alt={photo.alt_description}
                           />
-                          <a href={photo.user.portfolio_url} target="_blank" title="Visit the photographers website" className="credit">
+                          <a
+                            href={photo.user.portfolio_url}
+                            target="_blank"
+                            title="Visit the photographers website"
+                            className="credit"
+                          >
                             Photo by: {photo.user.first_name}{" "}
                             {photo.user.last_name}
                           </a>
-                          <a href={photo.links.download} target="_blank" title="Download this photo"><i class="fas fa-save download"></i></a>
+                          <a
+                            href={photo.links.download}
+                            target="_blank"
+                            title="Download this photo, large file size"
+                          >
+                            <i className="fas fa-save download downloadLarge"></i>
+                          </a>
+                          <a
+                            href={photo.urls.regular}
+                            target="_blank"
+                            title="Download this photo, medium file size"
+                          >
+                            <i className="fas fa-save download downloadRegular"></i>
+                          </a>
+
+                          <a
+                            href={photo.urls.small}
+                            target="_blank"
+                            title="Download this photo, small file size"
+                          >
+                            <i className="fas fa-save download downloadSmall"></i>
+                          </a>
                         </div>
                       );
                     })}
@@ -104,7 +132,6 @@ class App extends Component {
         </div>
 
         <Footer />
-
       </div>
     );
   }

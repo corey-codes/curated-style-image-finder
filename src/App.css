@@ -210,13 +210,25 @@ select {
 }
 
 .download {
-  font-size: 4rem;
+  /* font-size: 4rem; */
   padding: 1rem;
   color: #97dcd8;
 }
 
 .download:hover {
   color: #ac345c;
+}
+
+.downloadLarge {
+  font-size: 6rem;
+}
+
+.downloadRegular {
+  font-size: 5rem;
+}
+
+.downloadSmall {
+  font-size: 4rem;
 }
 
 
