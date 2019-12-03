@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/hellcat04/corey-derouin-project-5/static/css/main.05787c5d.chunk.css",
-    "main.js": "/hellcat04/corey-derouin-project-5/static/js/main.82ff675e.chunk.js",
-    "main.js.map": "/hellcat04/corey-derouin-project-5/static/js/main.82ff675e.chunk.js.map",
-    "runtime-main.js": "/hellcat04/corey-derouin-project-5/static/js/runtime-main.c6f2a30b.js",
-    "runtime-main.js.map": "/hellcat04/corey-derouin-project-5/static/js/runtime-main.c6f2a30b.js.map",
-    "static/js/2.3ca52ecd.chunk.js": "/hellcat04/corey-derouin-project-5/static/js/2.3ca52ecd.chunk.js",
-    "static/js/2.3ca52ecd.chunk.js.map": "/hellcat04/corey-derouin-project-5/static/js/2.3ca52ecd.chunk.js.map",
-    "index.html": "/hellcat04/corey-derouin-project-5/index.html",
-    "precache-manifest.e2df37b7a247cef4bd4e23954d065b21.js": "/hellcat04/corey-derouin-project-5/precache-manifest.e2df37b7a247cef4bd4e23954d065b21.js",
-    "service-worker.js": "/hellcat04/corey-derouin-project-5/service-worker.js",
-    "static/css/main.05787c5d.chunk.css.map": "/hellcat04/corey-derouin-project-5/static/css/main.05787c5d.chunk.css.map"
+    "main.css": "/corey-derouin-project-5/static/css/main.05787c5d.chunk.css",
+    "main.js": "/corey-derouin-project-5/static/js/main.c2f55145.chunk.js",
+    "main.js.map": "/corey-derouin-project-5/static/js/main.c2f55145.chunk.js.map",
+    "runtime-main.js": "/corey-derouin-project-5/static/js/runtime-main.88597f55.js",
+    "runtime-main.js.map": "/corey-derouin-project-5/static/js/runtime-main.88597f55.js.map",
+    "static/js/2.3ca52ecd.chunk.js": "/corey-derouin-project-5/static/js/2.3ca52ecd.chunk.js",
+    "static/js/2.3ca52ecd.chunk.js.map": "/corey-derouin-project-5/static/js/2.3ca52ecd.chunk.js.map",
+    "index.html": "/corey-derouin-project-5/index.html",
+    "precache-manifest.ce68ef24487e51b5459f61e20884237b.js": "/corey-derouin-project-5/precache-manifest.ce68ef24487e51b5459f61e20884237b.js",
+    "service-worker.js": "/corey-derouin-project-5/service-worker.js",
+    "static/css/main.05787c5d.chunk.css.map": "/corey-derouin-project-5/static/css/main.05787c5d.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.c6f2a30b.js",
+    "static/js/runtime-main.88597f55.js",
     "static/js/2.3ca52ecd.chunk.js",
     "static/css/main.05787c5d.chunk.css",
-    "static/js/main.82ff675e.chunk.js"
+    "static/js/main.c2f55145.chunk.js"
   ]
 }
