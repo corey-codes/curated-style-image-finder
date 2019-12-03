@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-// import { Link, Element, Events, animateScroll as scroll } from "react-scroll";
 //==============================================
 
 /* PSEUDO CODE =============================
@@ -19,6 +18,7 @@ WHAT WE NEED TO BUILD:
 
 
 // CONSTRUCTOR & SUPER ===========================
+// STORE USER SELECTION OF THEME
 class Search extends Component {
   constructor() {
     super();
@@ -28,6 +28,7 @@ class Search extends Component {
   }
 
 // FUNCTIONS ====================================
+// WATCH FORM FOR CHANGE WHEN USER MAKES A THEME SELECTION
   handleInputChange = (e) => {
     console.log(e.target.value);  
     this.setState({
@@ -35,10 +36,8 @@ class Search extends Component {
     });
   };
 
-  
-
-
 // RENDER =======================================
+// DEFERRED FUNCTION TO PASS PROPS
   render() {
     const deferredFunction = (e) => this.props.getUserThemeSelectionProp(e, this.state.userSelection);
 
@@ -46,10 +45,9 @@ class Search extends Component {
     return (
       <div className="Search">
         <div className="wrapper">
-          {/* SEARCH SECTION =============*/}
+{/* SEARCH SECTION =============*/}
           <div className="searchSection">
             <h2>Search</h2>
-
             <div className="formArea">
               <form action="" className="themeForm">
                 <label htmlFor="theme" className="visually-hidden"></label>

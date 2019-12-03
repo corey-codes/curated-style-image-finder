@@ -3,7 +3,6 @@ import axios from 'axios';
 import './App.css';
 import Head from './Head.js';
 import Search from './Search.js';
-import Results from './Results';
 import Footer from './Footer.js';
 //================================================
 
@@ -25,8 +24,6 @@ class App extends Component {
     this.state = {
       allPhotos: [],
       apiKey: "787d03c5f6bcb1fd25de1eb439b440461a0859cbb19a541743b4af9a881af1ca",
-      // pullPhotos: [],
-      // getPhotos: [],
     };
   }
 
@@ -59,26 +56,14 @@ class App extends Component {
     })
   };
 
-// FUNCTIONS ====================================
-
-// 1. NEED TO GET THE THEME SELECTED BY THE USER ON THE FORM
-
-  // getTheme = (e, themeChoice) => {
-  //   e.preventDefault();
-  //   // console.log(themeChoice);
-
-  //   const getPhotos = [...this.state.allPhotos];
-  //   // console.log(getPhotos, "got some photos when I hit submit!");
-  // };
-
 // RENDER =======================================
   render() {
+
 // RETURN ========================================
     return (
       <div className="App">
         <div className="flex">
           <Head />
-
           <div className="main flex">
             <Search handleSearch={this.handleSearch} />
         
@@ -145,7 +130,6 @@ class App extends Component {
             </div>
           </div>
         </div>
-
         <Footer />
       </div>
     );
@@ -153,15 +137,3 @@ class App extends Component {
 }
 // EXPORT =====================================
 export default App;
-
-/* REMAINING:
-
-. APPEND PHOTOS TO PAGE
-4. ALT TAG DESCRIPTION
-2. ADD PHOTOGRAPHERS NAME
-3. LINK BACK TO PHOTOGRAPHERS UNSPLASH PROFILE
-3. CREDIT UNSPLASH
-5. DOWNLOAD LINK
-6. ERROR MESSAGE IF USER SUBMITS WITHOUT CHOOSING CATEGORY
-
-*/

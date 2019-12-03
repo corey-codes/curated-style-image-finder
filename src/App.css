@@ -43,22 +43,6 @@ a {
     text-decoration: none;
 }
 
-ul, li {
-    list-style-type: none;
-}
-
-fieldset {
-    border: none;
-}
-
-input {
-    border: none;
-}
-
-textarea {
-    border: none;
-}
-
 /* GLOBAL STYLES ==============================*/
 
 html {
@@ -96,9 +80,7 @@ img {
 
 .App {
   text-align: center;
-  /* background-image: url('./assets/redox_01.png'); */
-    background-image: url('./assets/blue-snow.png');
-
+  background-image: url('./assets/blue-snow.png');
 }
 
 /* SECTIONS -================================ */
@@ -134,8 +116,6 @@ h1::after {
   margin: 3rem 0;
 }
 
-
-
 /* MAIN ======================================= */
 
 .main {
@@ -162,7 +142,6 @@ h2::after {
   bottom: -25px;
   left: 45%;
 }
-
 
 .Search, .Results {
   background-color: #ffff;

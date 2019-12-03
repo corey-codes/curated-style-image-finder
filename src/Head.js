@@ -10,9 +10,6 @@ class Head extends Component {
     this.state = {};
   }
 
-// FUNCTIONS ====================================
-
-
 // RENDER =======================================
   render() {
 
