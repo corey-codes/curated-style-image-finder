@@ -61,7 +61,7 @@ class Search extends Component {
                   ref={select => this.theme}
                 >
                   <option defaultValue="default" value="Choose One">
-                    Select a category
+                    Select a category 
                   </option>
                   <option value="Travel">Travel</option>
                   <option value="Fitness">Fitness</option>
@@ -81,7 +81,7 @@ class Search extends Component {
                   href="#gallery"
                   onClick={event => {
                     this.props.handleSearch(event, this.state.userSelection);
-                  }} 
+                  }}
                 >
                   Get My Photos
                 </button>
