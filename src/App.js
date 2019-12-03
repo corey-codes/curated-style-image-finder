@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Head from './Head.js';
 import Search from './Search.js';
-// import Results from './Results';
+import Results from './Results';
 import Footer from './Footer.js';
 //================================================
 
@@ -48,8 +48,15 @@ class App extends Component {
       const allPhotos = response.data.results;
       this.setState({
         allPhotos
-      }); //console.log(allPhotos);
+      }); 
     });
+
+    const originalArray = [...this.state.allPhotos];
+    const newPhotoArray = originalArray;
+
+    this.setState({
+      allPhotos: newPhotoArray
+    })
   };
 
 // FUNCTIONS ====================================
@@ -74,8 +81,7 @@ class App extends Component {
 
           <div className="main flex">
             <Search handleSearch={this.handleSearch} />
-
-            {/* <Results allPhotos={this.response.data.results} /> */}
+        
 {/* RESULTS */}
             <div className="Results">
               <div className="wrapper">
@@ -90,15 +96,24 @@ class App extends Component {
                             src={photo.urls.regular}
                             alt={photo.alt_description}
                           />
-                          <a
-                            href={photo.user.portfolio_url}
-                            target="_blank"
-                            title="Visit the photographers website"
-                            className="credit"
-                          >
-                            Photo by: {photo.user.first_name}{" "}
-                            {photo.user.last_name}
-                          </a>
+                          <div className="artist">
+                            <a
+                              href={photo.user.portfolio_url}
+                              target="_blank"
+                              title="Visit the photographers website"
+                              className="credit"
+                            >
+                              Photo by: {photo.user.first_name}{" "}
+                              {photo.user.last_name},
+                            </a>
+                            <a
+                              href="https://www.unsplash.com"
+                              target="_blank"
+                              title="Visit Unsplash.com"
+                              className="unsplash"
+                            > Unsplash.com contributor
+                            </a>
+                          </div>
                           <a
                             href={photo.links.download}
                             target="_blank"

@@ -28,7 +28,7 @@ class Head extends Component {
             <div className="intro">
               
               <p>
-                Life's too short to use terrible photos. Let us curate a collection of stock images for your convenience. Select a category to suit the theme of your website or blog to get a collection of gorgeous photos.
+                Life's too short to use terrible photos.  Just because you're not a designer doesn't mean your website should pay the price.  Let us curate a collection of gorgeous stock images for you that will best suit the theme of your website or blog.  Simply select the theme and let us work our magic.
               </p>
 
             </div>

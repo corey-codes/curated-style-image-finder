@@ -1,5 +1,6 @@
 // import React, { Component } from "react";
 // import "./App.css";
+// import { createConfigItem } from "@babel/core";
 //==============================================
 
 /* PSEUDO CODE =============================
@@ -8,16 +9,34 @@
 // 2. APPEND TO PAGE
 
 ========================================*/
+// const Results = (props) => {
+//   return(
+//     {props.allPhotos.length === 0
+//     ? <
+//     }
+
+//   )
+// }
+
 
 //CONSTRUCTOR & SUPER ===========================
 // class Results extends Component {
+//   constructor(props) {
+//     super(props);
+//       this.state = {
+//         allPhotos: this.state
+//       }; 
+//   }
 
 // RENDER =======================================
   // render() {
+    // console.log(this.props);
+
 
 //RETURN ====================================
-//     return (
+    // return (
 
+      // <div></div>
 //       <div className="Results">
 //           <div className="wrapper">
 //             <div className="gallerySection">
@@ -64,7 +83,7 @@
 //                     </div>
 //                   );
 //                 })}
-//               </div>
+              // </div>
 //             </div>
 //           </div>
 //         </div>
@@ -72,5 +91,5 @@
 //   }
 // }
 
-// // EXPORT ====================================
+// // // EXPORT ====================================
 // export default Results;

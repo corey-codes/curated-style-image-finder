@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Link, Element, Events, animateScroll as scroll } from "react-scroll";
+// import { Link, Element, Events, animateScroll as scroll } from "react-scroll";
 //==============================================
 
 /* PSEUDO CODE =============================
@@ -34,6 +34,9 @@ class Search extends Component {
       userSelection: e.target.value
     });
   };
+
+  
+
 
 // RENDER =======================================
   render() {
@@ -78,7 +81,7 @@ class Search extends Component {
                   href="#gallery"
                   onClick={event => {
                     this.props.handleSearch(event, this.state.userSelection);
-                  }}
+                  }} 
                 >
                   Get My Photos
                 </button>

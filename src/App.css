@@ -209,6 +209,18 @@ select {
   font-weight: 600;
 }
 
+.unsplash {
+  display: block;
+  padding: 1rem;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+.unsplash:hover{
+  color: #ac345c;
+  font-weight: 600;
+}
+
 .download {
   /* font-size: 4rem; */
   padding: 1rem;
@@ -220,15 +232,15 @@ select {
 }
 
 .downloadLarge {
-  font-size: 6rem;
-}
-
-.downloadRegular {
   font-size: 5rem;
 }
 
-.downloadSmall {
+.downloadRegular {
   font-size: 4rem;
+}
+
+.downloadSmall {
+  font-size: 3rem;
 }
 
 
@@ -240,8 +252,6 @@ select {
   font-size: 1.2rem;
 
 }
-
-
 
 /* *************************************** */
 /* MEDIA QUERIES 
