@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/corey-derouin-project-5/precache-manifest.ce68ef24487e51b5459f61e20884237b.js"
+  "/corey-derouin-project-5/precache-manifest.5c9fffb6e461a4d8ab53e8394fe30bc5.js"
 );
 
 self.addEventListener('message', (event) => {

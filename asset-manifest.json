@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/corey-derouin-project-5/static/css/main.05787c5d.chunk.css",
+    "main.css": "/corey-derouin-project-5/static/css/main.bb73800f.chunk.css",
     "main.js": "/corey-derouin-project-5/static/js/main.c2f55145.chunk.js",
     "main.js.map": "/corey-derouin-project-5/static/js/main.c2f55145.chunk.js.map",
     "runtime-main.js": "/corey-derouin-project-5/static/js/runtime-main.88597f55.js",
@@ -8,14 +8,14 @@
     "static/js/2.3ca52ecd.chunk.js": "/corey-derouin-project-5/static/js/2.3ca52ecd.chunk.js",
     "static/js/2.3ca52ecd.chunk.js.map": "/corey-derouin-project-5/static/js/2.3ca52ecd.chunk.js.map",
     "index.html": "/corey-derouin-project-5/index.html",
-    "precache-manifest.ce68ef24487e51b5459f61e20884237b.js": "/corey-derouin-project-5/precache-manifest.ce68ef24487e51b5459f61e20884237b.js",
+    "precache-manifest.5c9fffb6e461a4d8ab53e8394fe30bc5.js": "/corey-derouin-project-5/precache-manifest.5c9fffb6e461a4d8ab53e8394fe30bc5.js",
     "service-worker.js": "/corey-derouin-project-5/service-worker.js",
-    "static/css/main.05787c5d.chunk.css.map": "/corey-derouin-project-5/static/css/main.05787c5d.chunk.css.map"
+    "static/css/main.bb73800f.chunk.css.map": "/corey-derouin-project-5/static/css/main.bb73800f.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.88597f55.js",
     "static/js/2.3ca52ecd.chunk.js",
-    "static/css/main.05787c5d.chunk.css",
+    "static/css/main.bb73800f.chunk.css",
     "static/js/main.c2f55145.chunk.js"
   ]
 }
