@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/curated-style-image-finder/static/css/main.bb73800f.chunk.css",
+    "main.css": "/curated-style-image-finder/static/css/main.911dcc80.chunk.css",
     "main.js": "/curated-style-image-finder/static/js/main.7c8c802f.chunk.js",
     "main.js.map": "/curated-style-image-finder/static/js/main.7c8c802f.chunk.js.map",
     "runtime-main.js": "/curated-style-image-finder/static/js/runtime-main.dde727e5.js",
@@ -8,14 +8,14 @@
     "static/js/2.b419858f.chunk.js": "/curated-style-image-finder/static/js/2.b419858f.chunk.js",
     "static/js/2.b419858f.chunk.js.map": "/curated-style-image-finder/static/js/2.b419858f.chunk.js.map",
     "index.html": "/curated-style-image-finder/index.html",
-    "precache-manifest.37ebe5574ae5f711fcb388074f26e553.js": "/curated-style-image-finder/precache-manifest.37ebe5574ae5f711fcb388074f26e553.js",
+    "precache-manifest.9a2f6385b51c06ec6357aca5cfe4620a.js": "/curated-style-image-finder/precache-manifest.9a2f6385b51c06ec6357aca5cfe4620a.js",
     "service-worker.js": "/curated-style-image-finder/service-worker.js",
-    "static/css/main.bb73800f.chunk.css.map": "/curated-style-image-finder/static/css/main.bb73800f.chunk.css.map"
+    "static/css/main.911dcc80.chunk.css.map": "/curated-style-image-finder/static/css/main.911dcc80.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.dde727e5.js",
     "static/js/2.b419858f.chunk.js",
-    "static/css/main.bb73800f.chunk.css",
+    "static/css/main.911dcc80.chunk.css",
     "static/js/main.7c8c802f.chunk.js"
   ]
 }
